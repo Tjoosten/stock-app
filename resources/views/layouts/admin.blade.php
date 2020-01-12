@@ -37,12 +37,18 @@
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="accountDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                {{ $currentUser->name }}
+                                <i class="far fa-user-circle mr-1 fa-fw"></i> {{ $currentUser->name }}
                             </a>
 
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="accountDropdown">
+                                <a class="dropdown-item" href="">
+                                    <i class="fas fa-sliders-h mr-1 fa-fw text-secondary"></i> Instellingen
+                                </a>
+
+                                <div class="dropdown-divider"></div>
+
                                 <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                                   Afmelden
+                                    <i class="fas fa-power-off fa-fw mr-1 text-danger"></i> Afmelden
                                 </a>
 
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
@@ -57,7 +63,7 @@
             <div class="nav-scroller bg-white shadow-sm">
                 <nav class="nav nav-underline">
                     <a class="nav-link {{ active('home') }}" href="{{ route('home') }}">
-                        Dashboard
+                        <i class="fas fa-home mr-1 fa-fw text-muted"></i> Dashboard
                     </a>
                 </nav>
             </div>

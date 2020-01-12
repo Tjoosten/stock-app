@@ -12,6 +12,7 @@
 */
 
 use App\Http\Controllers\Auth\Settings\InformationController;
+use App\Http\Controllers\Auth\Settings\SecurityController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -19,7 +20,10 @@ Route::get('/', function () {
 
 Auth::routes(['verify' => true]);
 
+// Account settings routes
 Route::get('/account/instellingen', [InformationController::class, 'index'])->name('account.information');
 Route::patch('/account/instellingen', [InformationController::class, 'update'])->name('account.information.update');
+Route::get('/account/intstellingen/beveiliging', [SecurityController::class, 'index'])->name('account.security');
 
+// Dashboard routes
 Route::get('/home', 'HomeController@index')->name('home');

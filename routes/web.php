@@ -20,5 +20,6 @@ Route::get('/', function () {
 Auth::routes(['verify' => true]);
 
 Route::get('/account/instellingen', [InformationController::class, 'index'])->name('account.information');
+Route::patch('/account/instellingen', [InformationController::class, 'update'])->name('account.information.update');
 
 Route::get('/home', 'HomeController@index')->name('home');

@@ -15,13 +15,14 @@
             </div>
 
             <div class="col-9">
-                <form action="" method="POST" class="card shadow-sm border-0">
+                <form action="{{ route('account.information.update') }}" method="POST" class="card shadow-sm border-0">
                     @csrf
                     @method ('PATCH')
                     @form ($currentUser)
 
                     <div class="card-body">
                         <h6 class="border-bottom border-gray pb-1 mb-3">Algemene informatie</h6>
+                        @include('flash::message')
 
                         <div class="form-row">
                             <div class="form-group col-12">

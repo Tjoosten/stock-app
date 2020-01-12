@@ -29,4 +29,41 @@ class SecuritySettingsTest extends TestCase
             ->assertStatus(200)
             ->assertViewIs('account.settings.security');
     }
+
+    /** @test */
+    public function updateSecuritySettingsCurrentPasswordCheckFails(): void
+    {
+        $taylor = factory(User::class)->create();
+        $data = ['current_password' => 'faultyPassword', 'password' => 'password', 'password_confirmation' => 'password'];
+
+        $this->actingAs($taylor)
+            ->assertAuthenticatedAs($taylor)
+            ->patch(route('account.security.update', $data))
+            ->assertSessionHasErrorsIn('default', 'current_password');
+
+        $this->assertEquals(session('errors')->get('current_password')[0] , __('validation.matchUserPassword'));
+    }
+
+    /** @test */
+    public function updateSecuritySettingsConfirmationCheckFails(): void
+    {
+
+    }
+     /** @test */
+    public function updateSecuritySettingsWhenNoAuthentication(): void
+    {
+
+    }
+
+    /** @test */
+    public function updateSecuritySettingsSuccess(): void
+    {
+
+    }
+
+    /** @test */
+    public function updateSucritySettingsValidationErrors(): void
+    {
+
+    }
 }

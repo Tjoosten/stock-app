@@ -24,6 +24,7 @@ Auth::routes(['verify' => true]);
 Route::get('/account/instellingen', [InformationController::class, 'index'])->name('account.information');
 Route::patch('/account/instellingen', [InformationController::class, 'update'])->name('account.information.update');
 Route::get('/account/intstellingen/beveiliging', [SecurityController::class, 'index'])->name('account.security');
+Route::patch('/account/instellingen/beveiliging', [SecurityController::class, 'update'])->name('account.security.update');
 
 // Dashboard routes
 Route::get('/home', 'HomeController@index')->name('home');

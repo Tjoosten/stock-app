@@ -15,7 +15,7 @@
             </div>
 
             <div class="col-9">
-                <form action="" method="POST" class="border-0 shadow-sm card">
+                <form action="{{ route('account.security.update') }}" method="POST" class="border-0 shadow-sm card">
                     @csrf
                     @method ('PATCH')
 
@@ -26,13 +26,13 @@
                         <div class="form-row">
                             <div class="form-group col-12">
                                 <label for="current">Huidig wachtwoord <span class="text-danger">*</span></label>
-                                <input type="password" id="current" placeholder="Uw huidig wachtwoord" class="form-control @error('current_password')" @input('current_password')>
+                                <input type="password" id="current" placeholder="Uw huidig wachtwoord" class="form-control @error('current_password', 'is-invalid')" @input('current_password')>
                                 @error('current_password')
                             </div>
 
                             <div class="form-group col-6 mb-0">
                                 <label for="password">Nieuw wachtwoord <span class="text-danger">*</span></label>
-                                <input type="password" id="password" class="form-control @error('password', 'is-invalid')" placeholder="Uw nieuw wachtwoord" @error('password')>
+                                <input type="password" id="password" class="form-control @error('password', 'is-invalid')" placeholder="Uw nieuw wachtwoord" @input('password')>
                                 @error('password')
                             </div>
 

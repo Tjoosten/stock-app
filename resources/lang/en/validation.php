@@ -148,4 +148,16 @@ return [
 
     'attributes' => [],
 
+    /*
+    |--------------------------------------------------------------------------
+    | Custom Validation Rules
+    |--------------------------------------------------------------------------
+    |
+    | Here you may specify the validation translation rules,
+    | for the custom validation rules you build up in the application.
+    |
+    */
+
+    'matchUserPassword' => 'The given password is not your current password.',
+
 ];

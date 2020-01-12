@@ -11,10 +11,14 @@
 |
 */
 
+use App\Http\Controllers\Auth\Settings\InformationController;
+
 Route::get('/', function () {
     return view('welcome');
 });
 
 Auth::routes(['verify' => true]);
+
+Route::get('/account/instellingen', [InformationController::class, 'index'])->name('account.information');
 
 Route::get('/home', 'HomeController@index')->name('home');

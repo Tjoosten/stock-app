@@ -41,7 +41,7 @@
                             </a>
 
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="accountDropdown">
-                                <a class="dropdown-item" href="">
+                                <a class="dropdown-item" href="{{ route('account.information') }}">
                                     <i class="fas fa-sliders-h mr-1 fa-fw text-secondary"></i> Instellingen
                                 </a>
 

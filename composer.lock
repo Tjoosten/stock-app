@@ -4,8 +4,61 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "22c0dd7ebe06cfb47219684859ed395c",
+    "content-hash": "aed2541bbaf54a63637e086b49eb9b9b",
     "packages": [
+        {
+            "name": "actb/laravel-form-helpers",
+            "version": "1.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Activisme-be/Laravel-validation-helper.git",
+                "reference": "b1b72dcdfc144dea19c4acd845abaf934c8db6f4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Activisme-be/Laravel-validation-helper/zipball/b1b72dcdfc144dea19c4acd845abaf934c8db6f4",
+                "reference": "b1b72dcdfc144dea19c4acd845abaf934c8db6f4",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.2.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^2.9",
+                "laravel/laravel": "~5.8|~6.0",
+                "phpunit/phpunit": "~8.0",
+                "sensiolabs/security-checker": "^4.1"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "ActivismeBE\\FormHelper\\FormServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "ActivismeBE\\FormHelper\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Handle form model bind, old input and validation error messages in a clean easy way.",
+            "keywords": [
+                "eloquent",
+                "form",
+                "helpers",
+                "html",
+                "input",
+                "laravel",
+                "session",
+                "validation"
+            ],
+            "time": "2019-12-22T06:02:53+00:00"
+        },
         {
             "name": "dnoegel/php-xdg-base-dir",
             "version": "v0.1.1",
